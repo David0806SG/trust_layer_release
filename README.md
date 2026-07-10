@@ -13,6 +13,25 @@ inflation, not biology. On real GEO data (GSE146996), shuffling the labels to
 destroy all signal still yields a naive AUC of **0.99**, while honest CV
 correctly collapses to **0.54** (chance).
 
+## Web UI
+
+A modern web interface wraps the whole engine — upload your data (and optionally
+your analysis script), and get the verdict, the leakage ladder, code + data
+audits, and the full report, no code required. Run it with `./webapp/run.sh`
+(see [`webapp/`](webapp/)), then open http://localhost:8000.
+
+**Upload your dataset and analysis:**
+
+![Trust Layer web UI — upload screen](webapp/screenshots/01_upload.png)
+
+**The verdict — naive vs. honest performance, with the leakage ladder:**
+
+![Trust Layer web UI — verdict and leakage ladder](webapp/screenshots/02_verdict.png)
+
+**Line-anchored code audit and dataset audit, plus the downloadable report:**
+
+![Trust Layer web UI — code and data audits](webapp/screenshots/03_audits.png)
+
 ## What's in this bundle
 
 ### `code/` — the implementation
