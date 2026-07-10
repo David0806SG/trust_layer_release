@@ -1,0 +1,12 @@
+# Render blueprint — deploy the Trust Layer web UI straight from this repo.
+# On https://render.com: New → Blueprint → connect this GitHub repo. Render
+# reads this file, builds, and serves. Free plan spins down when idle (the
+# first request after a while has a cold start).
+services:
+  - type: web
+    name: trust-layer
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    autoDeploy: true

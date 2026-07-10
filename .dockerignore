@@ -1,0 +1,14 @@
+.git
+.venv
+venv
+__pycache__
+**/__pycache__
+*.pyc
+.DS_Store
+.playwright-mcp
+code/sample_dataset
+code/sample_dataset_clean
+sample_data/sample_dataset
+sample_data/sample_dataset_clean
+**/trust_out
+**/trust_out_compat

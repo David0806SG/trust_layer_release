@@ -30,6 +30,26 @@ CODE = os.path.join(ROOT, "code")
 STATIC = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static")
 
 
+def _ensure_sample_data():
+    """On a fresh deploy the bundled datasets aren't unpacked (they're gitignored
+    and shipped as sample_data/*.zip). Extract them into code/ so the 'Try sample
+    data' buttons work. Best-effort — the upload flow works regardless."""
+    import glob
+    import zipfile
+    for zpath in glob.glob(os.path.join(ROOT, "sample_data", "*.zip")):
+        try:
+            with zipfile.ZipFile(zpath) as z:
+                names = z.namelist()
+                top = names[0].split("/")[0] if names else ""
+                if top and not os.path.isdir(os.path.join(CODE, top)):
+                    z.extractall(CODE)
+        except Exception:
+            pass
+
+
+_ensure_sample_data()
+
+
 def _load_trust_layer():
     mods = {}
     for name in ("trust_layer", "notebook_audit", "trust_tasks", "trust_audit"):
