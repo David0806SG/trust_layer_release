@@ -96,3 +96,7 @@ external model weights or network access required.
 *No code from an audited notebook is ever executed — the code audit is purely
 static. Honest CV fits scaling, feature selection, and per-batch centering
 inside each training fold; GroupKFold keeps subjects intact.*
+
+## License
+
+Released under the [MIT License](LICENSE).
