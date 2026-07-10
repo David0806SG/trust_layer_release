@@ -1,5 +1,7 @@
 # The Trust Layer — release bundle
 
+> Built for the [Anthropic Research × Built with Claude: Life Sciences hackathon](https://cerebralvalley.ai/e/built-with-claude-life-sciences).
+
 An agentic trust check for small-data biology ML. Point it at a dataset (and,
 optionally, the analysis notebook) and it (1) audits for data leakage, (2)
 re-runs an honest, leakage-safe cross-validation, (3) fits a calibrated model
