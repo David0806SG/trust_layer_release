@@ -20,17 +20,7 @@ your analysis script), and get the verdict, the leakage ladder, code + data
 audits, and the full report, no code required. Run it with `./webapp/run.sh`
 (see [`webapp/`](webapp/)), then open http://localhost:8000.
 
-**Upload your dataset and analysis:**
-
-![Trust Layer web UI — upload screen](webapp/screenshots/01_upload.png)
-
-**The verdict — naive vs. honest performance, with the leakage ladder:**
-
-![Trust Layer web UI — verdict and leakage ladder](webapp/screenshots/02_verdict.png)
-
-**Line-anchored code audit and dataset audit, plus the downloadable report:**
-
-![Trust Layer web UI — code and data audits](webapp/screenshots/03_audits.png)
+![The Trust Layer web UI — upload your data, the naive-vs-honest verdict with the leakage ladder, and the line-anchored code + data audits](webapp/screenshots/webui_demo.gif)
 
 ## What's in this bundle
 
@@ -67,6 +57,8 @@ Small leaky / clean scripts + a `.ipynb`, used to validate the static code audit
 ### `deck/`
 `trust_layer_hackathon.pptx` — 13-slide judge deck (9 main + 4 appendix), with
 **speaker notes** on every slide (Presenter View: a ~3-minute scripted pitch).
+A rendered [`trust_layer_hackathon.pdf`](deck/trust_layer_hackathon.pdf) is
+included for quick viewing.
 
 ## Quick start
 
